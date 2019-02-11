@@ -1,19 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/11 15:07:28 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/11 14:36:14 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/11 14:36:18 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int				ft_strlen(char *str);
-char			*ft_strdup(char *src)
-char			*ft_strcpy(char *dest, char *src);
-char			*ft_strncpy(char *dest, char *src, unsigned int n);
-char			*ft_strcat(char *dest, char *src);
-char			*ft_strncat(char *dest, char *src, int nb);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+#include <stdlib.h>
+
+char	*ft_strdup(char *src)
+{
+	char	*copy;
+	int		i;
+	int		l;
+
+	l = 0;
+	while (src[l])
+		l += 1;
+	copy = malloc(sizeof(char) * (l + 1));
+	i = 0;
+	while (i < l)
+	{
+		copy[i] = src[i];
+		i += 1;
+	}
+	copy[l] = '\0';
+	return (copy);
+}

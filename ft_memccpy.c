@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 14:07:55 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/12 14:10:27 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/12 14:07:25 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/12 14:13:14 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	size_t	i;
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	{
 		((char *)dst)[i] = ((char *)src)[i];
 		i += 1;
+		if (((unsigned char *)src)[i] == (unsigned char)c)
+			break ;
 	}
-	return (dst);
+	return (i == n ? NULL : dst + i);
 }

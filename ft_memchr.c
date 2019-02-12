@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 14:07:55 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/12 14:10:27 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/12 14:21:59 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/12 14:27:11 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		((char *)dst)[i] = ((char *)src)[i];
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return (s + i);
 		i += 1;
 	}
-	return (dst);
+	return (NULL);
 }

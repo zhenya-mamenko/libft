@@ -6,13 +6,13 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 14:22:30 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/12 14:30:42 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/12 14:39:02 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int		*ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 

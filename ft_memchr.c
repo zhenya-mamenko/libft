@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 14:21:59 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/12 14:27:11 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/12 14:39:38 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return (s + i);
+			return ((void *)(s + i));
 		i += 1;
 	}
 	return (NULL);

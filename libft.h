@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
+/*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/11 17:06:53 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/12 13:17:57 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,10 @@ int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(char *str);
 int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
 /* 
-isdigit
-isalnum
 isascii
 isprint
 toupper

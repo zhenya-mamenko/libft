@@ -6,16 +6,18 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:32:50 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/11 14:32:59 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/11 16:30:21 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
+#include <string.h>
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }

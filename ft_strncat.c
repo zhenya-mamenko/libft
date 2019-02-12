@@ -6,30 +6,32 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:46:47 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/11 14:47:06 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/11 16:38:06 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+#include <string.h>
+
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	int i;
 	int c;
 
 	i = 0;
 	c = 0;
-	while (nb > 0)
+	while (n > 0)
 	{
-		if (c > 0 || !dest[i])
+		if (c > 0 || !s1[i])
 		{
-			dest[i] = src[c];
+			s1[i] = s2[c];
 			c += 1;
-			if (!src[c] || c == nb)
+			if (!s2[c] || c == n)
 			{
-				dest[i + 1] = '\0';
-				return (dest);
+				s1[i + 1] = '\0';
+				return (s1);
 			}
 		}
 		i += 1;
 	}
-	return (dest);
+	return (s1);
 }

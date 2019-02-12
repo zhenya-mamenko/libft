@@ -6,24 +6,26 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:41:55 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/11 14:41:58 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/11 16:34:49 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+#include <string.h>
+
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
-	while ((i < n) && src[i])
+	while ((i < len) && src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i += 1;
 	}
-	while (i < n)
+	while (i < len)
 	{
-		dest[i] = '\0';
+		dst[i] = '\0';
 		i += 1;
 	}
-	return (dest);
+	return (dst);
 }

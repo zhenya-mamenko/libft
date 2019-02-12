@@ -6,11 +6,11 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:45:59 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/11 14:46:02 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/11 16:36:59 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	int i;
 	int c;
@@ -19,14 +19,14 @@ char	*ft_strcat(char *dest, char *src)
 	c = 0;
 	while (1)
 	{
-		if (c > 0 || !dest[i])
+		if (c > 0 || !s1[i])
 		{
-			dest[i] = src[c];
-			if (!src[c])
+			s1[i] = s2[c];
+			if (!s2[c])
 				break ;
 			c += 1;
 		}
 		i += 1;
 	}
-	return (dest);
+	return (s1);
 }

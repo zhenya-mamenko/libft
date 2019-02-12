@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/12 13:17:57 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/12 13:25:30 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
-/* 
-isascii
-isprint
-toupper
-tolower */
+int		ft_isprint(int c);
+int		ft_toupper(int c);
+int		ft_tolower(int c);

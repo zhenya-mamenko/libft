@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 13:33:11 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 09:54:14 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/11 15:28:36 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/13 09:20:17 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+#include <string.h>
+
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (s[i])
+	while (s1[i] && s2[i] && i < n)
 	{
-		(*f)(i, s + i);
+		if (s1[i] != s2[i])
+			return (0);
 		i += 1;
 	}
+	if (s1[i] == '\0')
+	{
+		if (s2[i] == '\0')
+			return (1);
+		else
+			return (0);
+	}
+	else if (i == n)
+		return (0);
+	return (1);
 }

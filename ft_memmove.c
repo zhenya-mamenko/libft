@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 14:07:55 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/12 14:20:49 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/13 09:09:52 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,21 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*buf;
 
 	buf = malloc(sizeof(char) * len);
-	i = 0;
-	while (i < len)
+	if (buf != NULL)
 	{
-		buf[i] = ((char *)src)[i];
-		i += 1;
+		i = 0;
+		while (i < len)
+		{
+			buf[i] = ((char *)src)[i];
+			i += 1;
+		}
+		i = 0;
+		while (i < len)
+		{
+			((char *)dst)[i] = buf[i];
+			i += 1;
+		}
+		free(buf);
 	}
-	i = 0;
-	while (i < len)
-	{
-		((char *)dst)[i] = buf[i];
-		i += 1;
-	}
-	free(buf);
 	return (dst);
 }

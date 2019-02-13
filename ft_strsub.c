@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 13:33:11 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 09:54:14 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/13 09:44:22 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/13 09:49:56 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
-{
-	int i;
+#include <stdlib.h>
 
-	i = 0;
-	while (s[i])
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
+{
+	char	*b;
+	size_t	i;
+
+	b = malloc(sizeof(char) * (len + 1));
+	if (b != NULL)
 	{
-		(*f)(i, s + i);
-		i += 1;
+		i = 0;
+		while (i < len)
+		{
+			b[i] = s[i + len];
+			i += 1;
+		}
+		b[len] = '\0';
 	}
+	return (b);
 }

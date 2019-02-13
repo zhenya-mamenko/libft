@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/12 13:33:11 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 09:54:14 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/11 15:26:23 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/13 09:18:21 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int	ft_strequ(char const *s1, char const *s2)
 {
 	int i;
 
 	i = 0;
-	while (s[i])
+	while (s1[i] && s2[i])
 	{
-		(*f)(i, s + i);
+		if (s1[i] != s2[i])
+			return (0);
 		i += 1;
 	}
+	if (s1[i] == '\0')
+	{
+		if (s2[i] == '\0')
+			return (1);
+		else
+			return (0);
+	}
+	else
+		return (0);
 }

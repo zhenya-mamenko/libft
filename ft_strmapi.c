@@ -6,21 +6,12 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:59:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 09:53:39 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/13 10:11:12 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-static size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -35,7 +26,7 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	{
 		while (s[i])
 		{
-			b[i] = (*f)(i, s + i);
+			b[i] = (*f)(i, *(s + i));
 		}
 		b[l] = '\0';
 	}

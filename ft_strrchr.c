@@ -6,21 +6,12 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 16:51:28 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/12 14:38:07 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/13 10:04:42 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-
-static size_t	ft_strlen(char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char			*ft_strrchr(const char *s, int c)
 {

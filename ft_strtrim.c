@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 08:59:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 10:11:04 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/13 09:59:13 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/13 10:09:32 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char			*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strtrim(char const *s)
 {
-	int		i;
-	char	*b;
-	size_t	l;
+	size_t	i;
+	size_t	start;
+	size_t	len;
 
 	i = 0;
-	l = ft_strlen(s);
-	b = malloc(l + 1);
-	if (b != NULL)
-	{
-		while (s[i])
-		{
-			b[i] = (*f)(*(s + i));
-			i += 1;
-		}
-		b[l] = '\0';
-	}
-	return (b);
+	while (s[i] == ' ' && s[i] == '\n' && s[i] == '\t')
+		i++;
+	start = i - 1;
+	i = ft_strlen(s) - 1;
+	while (s[i] == ' ' && s[i] == '\n' && s[i] == '\t')
+		i--;
+	len = i - start + 1;
+	return (ft_strsub(s, start, len));
 }

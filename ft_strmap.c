@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:59:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 10:11:04 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/14 15:38:44 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char			*ft_strmap(char const *s, char (*f)(char))
 	{
 		while (s[i])
 		{
-			b[i] = (*f)(*(s + i));
+			b[i] = (*f)(s[i]);
 			i += 1;
 		}
 		b[l] = '\0';

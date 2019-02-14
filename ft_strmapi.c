@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:59:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 10:11:12 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/14 15:38:54 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	{
 		while (s[i])
 		{
-			b[i] = (*f)(i, *(s + i));
+			b[i] = (*f)(i, s[i]);
+			i += 1;
 		}
 		b[l] = '\0';
 	}

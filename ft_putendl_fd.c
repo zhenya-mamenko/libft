@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 09:59:13 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 16:37:56 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/14 17:07:58 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/14 17:08:18 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include "libft.h"
-
-char	*ft_strtrim(char const *s)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	size_t	i;
-	size_t	start;
-	size_t	len;
 
-	i = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	start = i;
-	i = ft_strlen(s) - 1;
-	if (start != i)
-		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-			i--;
-	len = i - start + 1;
-	return (start != i ? ft_strsub(s, start, len) : ft_strnew(0));
 }

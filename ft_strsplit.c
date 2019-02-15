@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 09:59:13 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 16:37:56 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/14 16:10:48 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/14 16:29:33 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
-char	*ft_strtrim(char const *s)
+char	**ft_strsplit(char const *s, char c)
 {
-	size_t	i;
-	size_t	start;
-	size_t	len;
-
-	i = 0;
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	start = i;
-	i = ft_strlen(s) - 1;
-	if (start != i)
-		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-			i--;
-	len = i - start + 1;
-	return (start != i ? ft_strsub(s, start, len) : ft_strnew(0));
+	if (s[0] != c) {};
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 17:09:05 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/14 19:08:03 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+int		ft_word_count(char const *s, char d);
+char	*ft_extract_word(char const *s, char d, unsigned int n);
+char	*ft_strshrink(char **s);
 
 #endif

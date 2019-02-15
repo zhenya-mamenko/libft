@@ -6,14 +6,28 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 16:10:48 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 16:29:33 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/14 19:18:01 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
+#include <stdio.h>
 
 char	**ft_strsplit(char const *s, char c)
 {
-	if (s[0] != c) {};
-	return (NULL);
+	int		count;
+	int		i;
+	char	**a;
+
+	count = ft_word_count(s, c);
+	a = malloc(sizeof(char *) * (count + 1));
+	a[count] = 0;
+	i = 0;
+	while (i < count)
+	{
+		a[i] = ft_extract_word(s, c, i + 1);
+		i += 1;
+	}
+	return (a);
 }

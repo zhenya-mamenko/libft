@@ -6,13 +6,40 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 16:12:53 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 16:14:22 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/14 17:20:20 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-char	*ft_itoa(int n)
+static void	r_itoa(long nb, char *s, int *index)
 {
-	return (NULL);
+	if (nb < 0)
+	{
+		s[(*index)++] = '-';
+		r_itoa(-nb, s, index);
+	}
+	else if (nb > 9)
+	{
+		r_itoa(nb / 10, s, index);
+		r_itoa(nb % 10, s, index);
+	}
+	else
+	{
+		s[(*index)++] = nb + '0';
+	}
+	s[*index] = '\0';
+}
+
+char		*ft_itoa(int n)
+{
+	char	*s;
+	int		i;
+
+	i = 0;
+	s = ft_strnew(11);
+	if (s != NULL)
+		r_itoa(n, s, &i);
+	return (s);
 }

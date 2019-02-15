@@ -6,11 +6,14 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 17:07:58 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 17:08:18 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/14 17:25:46 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 void	ft_putendl_fd(char const *s, int fd)
 {
-
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

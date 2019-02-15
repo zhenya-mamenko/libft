@@ -6,7 +6,7 @@
 #    By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/11 13:54:51 by emamenko          #+#    #+#              #
-#    Updated: 2019/02/14 17:08:49 by emamenko         ###   ########.fr        #
+#    Updated: 2019/02/14 19:04:48 by emamenko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SOURCES	=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
 			ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c \
 			ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strsplit.c \
 			ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
-			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+			ft_word_count.c ft_extract_word.c ft_strshrink.c
 OBJECTS	=	$(SOURCES:.c=.o)
 
 .PHONY:		$(NAME) all clean fclean re

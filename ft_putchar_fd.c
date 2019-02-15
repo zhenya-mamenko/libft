@@ -6,11 +6,13 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 17:05:28 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 17:08:23 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/14 17:22:14 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	ft_putchar_fd(char c, int fd)
 {
-
+	write(fd, &c, 1);
 }

@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_word_count.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/14 17:08:43 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 17:24:28 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/14 18:02:02 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/14 18:09:36 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr_fd(int n, int fd)
+int	ft_word_count(char const *s, char d)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
+	int	c;
+	int	f;
+
+	c = 0;
+	f = 0;
+	while (*s)
+	{
+		if (*s != d)
+		{
+			if (f == 0)
+			{
+				c += 1;
+				f = 1;
+			}
+		}
+		else
+			f = 0;
+		s++;
+	}
+	return (c);
 }

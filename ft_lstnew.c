@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/14 16:15:50 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 08:11:26 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/15 08:15:07 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/15 08:29:09 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	ft_putstr_fd(s, 1);
+	if (content == NULL || content_size == 0)
+		;
+	return (NULL);
 }

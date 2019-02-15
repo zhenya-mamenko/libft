@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/14 16:15:50 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 08:11:26 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/15 08:18:20 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/15 08:29:28 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	ft_putstr_fd(s, 1);
+	if (lst == NULL || f == NULL)
+		;
 }

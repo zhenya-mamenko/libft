@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 09:59:13 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 10:09:32 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/14 16:10:05 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,13 @@ char	*ft_strtrim(char const *s)
 	size_t	len;
 
 	i = 0;
-	while (s[i] == ' ' && s[i] == '\n' && s[i] == '\t')
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	start = i - 1;
+	start = i;
 	i = ft_strlen(s) - 1;
-	while (s[i] == ' ' && s[i] == '\n' && s[i] == '\t')
-		i--;
+	if (start != i)
+		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+			i--;
 	len = i - start + 1;
-	return (ft_strsub(s, start, len));
+	return (start != i ? ft_strsub(s, start, len) : ft_strnew(0));
 }

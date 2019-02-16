@@ -6,7 +6,7 @@
 #    By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/11 13:54:51 by emamenko          #+#    #+#              #
-#    Updated: 2019/02/16 15:12:58 by emamenko         ###   ########.fr        #
+#    Updated: 2019/02/16 15:19:22 by emamenko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SOURCES	=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
 			\
 			ft_word_count.c ft_extract_word.c ft_strshrink.c \
 			ft_flatten_charr.c ft_flatten_intarr.c
+			
 OBJECTS	=	$(SOURCES:.c=.o)
 
 all:		$(NAME)

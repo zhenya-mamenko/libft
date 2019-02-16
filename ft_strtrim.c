@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 09:59:13 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 21:32:45 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:24:46 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strtrim(char const *s)
 	size_t	start;
 	size_t	len;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;

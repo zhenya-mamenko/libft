@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 09:44:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 10:10:39 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:22:50 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	char	*b;
 	size_t	i;
 
+	if (s == NULL)
+		return (NULL);
 	b = malloc(sizeof(char) * (len + 1));
 	if (b != NULL)
 	{

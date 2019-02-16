@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:59:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 15:38:44 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:17:05 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char			*ft_strmap(char const *s, char (*f)(char))
 	char	*b;
 	size_t	l;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	l = ft_strlen(s);
 	b = malloc(l + 1);

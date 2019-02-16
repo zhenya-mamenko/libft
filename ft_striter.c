@@ -6,14 +6,18 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 13:33:11 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 09:54:05 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:15:21 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
 
+	if (s == NULL)
+		return ;
 	i = 0;
 	while (s[i])
 	{

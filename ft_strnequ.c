@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 15:28:36 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 15:45:46 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:21:54 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
 	size_t i;
 
+	if (s1 == NULL || s2 == NULL)
+		return (s1 == s2 ? 1 : 0);
 	i = 0;
 	while (s1[i] && s2[i] && i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:59:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/13 10:04:51 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:24:01 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char			*ft_strjoin(char const *s1, char const *s2)
 	int		c;
 	char	*b;
 
+	if (s1 == NULL || s2 == NULL)
+		return (s1 == NULL ? s2 : s1);
 	b = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
 	if (b != NULL)
 	{

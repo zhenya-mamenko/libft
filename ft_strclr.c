@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 13:33:11 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 11:57:10 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:14:22 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_strclr(char *s)
 {
 	int i;
 
+	if (s == NULL)
+		return ;
 	i = ft_strlen(s) - 1;
 	while (i >= 0)
 	{

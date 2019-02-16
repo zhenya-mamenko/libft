@@ -6,17 +6,21 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 13:33:11 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/12 16:22:13 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 11:32:14 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {
 	int i;
 
-	i = 0;
-	while (s[i])
-		s[i++] = '\0';
+	i = ft_strlen(s) - 1;
+	while (i >= 0)
+	{
+		s[i] = '\0';
+		i += 1;
+	}
 }

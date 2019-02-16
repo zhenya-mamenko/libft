@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 12:09:47 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:42:38 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,5 +87,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_word_count(char const *s, char d);
 char				*ft_extract_word(char const *s, char d, unsigned int n);
 char				*ft_strshrink(char **s);
+char				*ft_flatten_char_array(char **a);
+char				*ft_flatten_int_array(int *a, size_t n);
 
 #endif

@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_flat_char.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/11 14:32:50 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 14:38:24 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/16 14:31:13 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/16 14:33:09 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_flatten_char_array(char **a)
 {
-	size_t	i;
+	int		i;
+	int		len;
+	char	*s;
 
 	i = 0;
+	len = 0;
+	while (a[i])
+		len += ft_strlen(a[i++]) + 1;
+	len += 1;
+	s = malloc(sizeof(char) * len);
 	if (s == NULL)
-		return (0);
-	while (s[i] != '\0')
-		i++;
-	return (i);
+		return (NULL);
+	i = 0;
+	len = 0;
+	while (a[i])
+	{
+		ft_strcpy(&s[len], a[i]);
+		len += strlen(a[i]);
+		s[len++] = '\n';
+		i += 1;
+	}
+	s[len] = '\0';
+	return (s);
 }

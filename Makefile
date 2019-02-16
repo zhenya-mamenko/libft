@@ -6,9 +6,11 @@
 #    By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/11 13:54:51 by emamenko          #+#    #+#              #
-#    Updated: 2019/02/16 15:20:15 by emamenko         ###   ########.fr        #
+#    Updated: 2019/02/16 15:27:56 by emamenko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+.PHONY:		$(NAME) all clean fclean re
 
 NAME	=	libft.a
 SOURCES	=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
@@ -31,14 +33,13 @@ SOURCES	=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
 			ft_word_count.c ft_extract_word.c ft_strshrink.c \
 			ft_flatten_charr.c ft_flatten_intarr.c
 			
-OBJECTS	=	$(SOURCES:.c=.o)
+OBJECTS	=	$(SOURCES:%.c=%.o)
 
 all:		$(NAME)
 
 $(NAME):
 			gcc -Wall -Wextra -Werror -I. -c $(SOURCES)
-			ar rc $(NAME) $(OBJECTS)
-			ranlib $(NAME)
+			ar rcs $(NAME) $(OBJECTS)
 
 clean:
 			rm -f $(OBJECTS)

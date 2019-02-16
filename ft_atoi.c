@@ -6,11 +6,11 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 15:33:42 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 13:56:09 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:16:33 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	check(char c, int f, int v)
+static int	check(char c, int f, long v)
 {
 	int	result;
 	int	r;
@@ -20,27 +20,26 @@ static int	check(char c, int f, int v)
 	result = (c == ' ' || c == '\n' || c == '\t' || c == '\r' ||
 		c == '\v' || c == '\f') ? 2 : result;
 	r = f < result ? -1 : result;
-	if (result == 0 && (v < 0 ? -v : v) >= 214748364)
+	if (result == 0 && (v < 0 ? -v : v) >= 922337203685477580)
 	{
-		if ((v < 0 ? -v : v) == 214748364)
+		if ((v < 0 ? -v : v) == 922337203685477580)
 		{
 			if ((v < 0 && (c - '0') > 8) || (v > 0 && (c - '0') > 7))
 				r = -100;
 		}
 		else
 			r = -100;
-		r = 0;
 	}
 	return (r);
 }
 
 int			ft_atoi(const char *str)
 {
-	int	result;
-	int	i;
-	int	f;
-	int	r;
-	int	n;
+	long	result;
+	int		i;
+	int		f;
+	int		r;
+	int		n;
 
 	result = 0;
 	i = -1;

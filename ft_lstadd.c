@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 08:17:42 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 08:28:02 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/15 18:12:21 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,7 @@
 void	ft_lstadd(t_list **alst, t_list *new)
 {
 	if (alst == NULL || new == NULL)
-		;
+		return ;
+	new->next = *alst;
+	*alst = new;
 }

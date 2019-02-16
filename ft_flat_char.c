@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 14:31:13 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 14:33:09 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:56:47 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_flatten_char_array(char **a)
 	while (a[i])
 	{
 		ft_strcpy(&s[len], a[i]);
-		len += strlen(a[i]);
+		len += ft_strlen(a[i]);
 		s[len++] = '\n';
 		i += 1;
 	}

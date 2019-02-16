@@ -6,7 +6,7 @@
 #    By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/11 13:54:51 by emamenko          #+#    #+#              #
-#    Updated: 2019/02/16 14:43:11 by emamenko         ###   ########.fr        #
+#    Updated: 2019/02/16 15:12:58 by emamenko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,9 +27,11 @@ SOURCES	=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
 			ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 			\
-			ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
+			ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
+			ft_lstmap.c \
 			\
-			ft_word_count.c ft_extract_word.c ft_strshrink.c ft_flat_char.c ft_flat_int.c
+			ft_word_count.c ft_extract_word.c ft_strshrink.c \
+			ft_flatten_charr.c ft_flatten_intarr.c
 OBJECTS	=	$(SOURCES:.c=.o)
 
 all:		$(NAME)

@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flat_int.c                                      :+:      :+:    :+:   */
+/*   ft_flat_char.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/16 14:33:32 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 14:51:34 by emamenko         ###   ########.fr       */
+/*   Created: 2019/02/16 14:31:13 by emamenko          #+#    #+#             */
+/*   Updated: 2019/02/16 15:10:59 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_flatten_int_array(int *a, size_t n)
+char	*ft_flatten_charr(char **a)
 {
-	size_t	i;
+	int		i;
 	int		len;
 	char	*s;
-	char	*e;
 
-	s = ft_strnew(n * 12);
+	i = 0;
+	len = 0;
+	while (a[i])
+		len += ft_strlen(a[i++]) + 1;
+	len += 1;
+	s = malloc(sizeof(char) * len);
 	if (s == NULL)
 		return (NULL);
 	i = 0;
 	len = 0;
-	while (i < n)
+	while (a[i])
 	{
-		e = ft_itoa(a[i]);
-		ft_strcpy(&s[len], e);
-		len += ft_strlen(e);
-		free(e);
-		s[len++] = '\t';
+		ft_strcpy(&s[len], a[i]);
+		len += ft_strlen(a[i]);
+		s[len++] = '\n';
 		i += 1;
 	}
-	s[len - 1] = '\0';
-	e = ft_strdup(s);
-	free(s);
-	return (e);
+	s[len] = '\0';
+	return (s);
 }

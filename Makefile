@@ -6,7 +6,7 @@
 #    By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/11 13:54:51 by emamenko          #+#    #+#              #
-#    Updated: 2019/02/15 08:18:32 by emamenko         ###   ########.fr        #
+#    Updated: 2019/02/16 10:31:24 by emamenko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ OBJECTS	=	$(SOURCES:.c=.o)
 all:		$(NAME)
 
 $(NAME):
-			gcc -Wall -Wextra -Werror -c $(SOURCES)
+			gcc -Wall -Wextra -Werror -I. -c $(SOURCES)
 			ar rc $(NAME) $(OBJECTS)
 			ranlib $(NAME)
 

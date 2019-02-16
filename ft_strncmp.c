@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 15:28:36 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 20:14:02 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/15 22:26:24 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,9 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	if (i == n)
 		return (0);
-	if (s1[i] == '\0')
+	if (s1[i] == '\0' || s2[i] == '\0')
 	{
-		if (s2[i] == '\0')
-			return (0);
-		else
-			return (-b2[i]);
+		return (b1[i] - b2[i]);
 	}
-	else if (i == n)
-		return (b1[i]);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 16:12:53 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/14 17:20:20 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/15 22:49:56 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,22 @@ char		*ft_itoa(int n)
 {
 	char	*s;
 	int		i;
+	long	n2;
 
 	i = 0;
-	s = ft_strnew(11);
+	n2 = n;
+	if (n2 < 0)
+	{
+		n2 = -n2;
+		i += 1;
+	}
+	while (n2 >= 10)
+	{
+		n2 /= 10;
+		i += 1;
+	}
+	s = ft_strnew(i + 1);
+	i = 0;
 	if (s != NULL)
 		r_itoa(n, s, &i);
 	return (s);

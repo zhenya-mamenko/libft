@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 08:16:51 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 18:09:13 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:32:46 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list	*el;
 
-	if (*alst == NULL)
+	if (*alst == NULL || del == NULL)
 		return ;
 	while ((*alst))
 	{

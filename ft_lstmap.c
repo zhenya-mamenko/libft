@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 08:18:43 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 18:30:31 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:33:45 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	t_list	*new;
 	t_list	*el;
 
-	if (!lst)
+	if (lst == NULL || f == NULL)
 		return (NULL);
 	new = (*f)(lst);
 	el = new;

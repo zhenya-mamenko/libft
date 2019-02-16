@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 16:06:07 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 12:31:37 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 12:35:20 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_strdel(char **as)
 {
-	if (**as == NULL || *as == NULL)
+	if (as == NULL || *as == NULL)
 		return ;
 	free(*as);
 	*as = NULL;

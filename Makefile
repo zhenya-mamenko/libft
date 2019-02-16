@@ -6,9 +6,11 @@
 #    By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/11 13:54:51 by emamenko          #+#    #+#              #
-#    Updated: 2019/02/16 10:31:24 by emamenko         ###   ########.fr        #
+#    Updated: 2019/02/16 11:15:40 by emamenko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+.PHONY:		$(NAME) all clean fclean re
 
 NAME	=	libft.a
 SOURCES	=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
@@ -29,8 +31,6 @@ SOURCES	=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
 			\
 			ft_word_count.c ft_extract_word.c ft_strshrink.c
 OBJECTS	=	$(SOURCES:.c=.o)
-
-.PHONY:		$(NAME) all clean fclean re
 
 all:		$(NAME)
 

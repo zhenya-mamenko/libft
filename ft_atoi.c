@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 15:33:42 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 13:37:52 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/16 13:56:09 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ static int	check(char c, int f, int v)
 		}
 		else
 			r = -100;
+		r = 0;
 	}
 	return (r);
 }

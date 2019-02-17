@@ -1,40 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flatten_charr.c                                 :+:      :+:    :+:   */
+/*   ft_flatten_tlist.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 14:31:13 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/17 07:23:06 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/17 09:37:07 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*ft_flatten_charr(char **a)
+static size_t	lst_content_len(t_list *el)
 {
-	int		i;
-	int		len;
-	char	*s;
+	size_t	len;
 
-	i = 0;
 	len = 0;
-	while (a[i])
-		len += ft_strlen(a[i++]) + 1;
+	while (el)
+	{
+		len += el->content_size;
+		el = el->next;
+	}
 	len += 1;
+	return (len);
+}
+
+char			*ft_flatten_tlist(t_list const *list)
+{
+	size_t	len;
+	char	*s;
+	t_list	*el;
+
+	if (list == NULL)
+		return (NULL);
+	len = lst_content_len((t_list *)list);
 	s = malloc(sizeof(char) * len);
 	if (s == NULL)
 		return (NULL);
-	i = 0;
 	len = 0;
-	while (a[i])
+	el = (t_list *)list;
+	while (el)
 	{
-		ft_strcpy(&s[len], a[i]);
-		len += ft_strlen(a[i]);
-		s[len++] = '\n';
-		i += 1;
+		ft_strcpy(&s[len], el->content);
+		len += el->content_size;
+		s[len - 1] = '\n';
+		el = el->next;
 	}
 	s[len] = '\0';
 	return (s);

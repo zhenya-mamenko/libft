@@ -6,14 +6,14 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/17 11:18:24 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/18 19:12:08 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/18 21:27:21 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE 32
+# define BUFF_SIZE 10000000
 
 typedef struct	s_fpt
 {

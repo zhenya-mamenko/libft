@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:59:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 12:28:50 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 11:38:38 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,25 @@
 
 char			*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		c;
+	int		l1;
+	int		l2;
 	char	*b;
 
 	if (s1 == NULL || s2 == NULL)
-		return ((char *)(s1 == NULL ? s2 : s1));
-	b = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	{
+		if (s1 == NULL && s2 == NULL)
+			return (ft_strnew(0));
+		else
+			return ((char *)(s1 == NULL ? ft_strdup(s2) : ft_strdup(s1)));
+	}
+	l1 = ft_strlen(s1);
+	l2 = ft_strlen(s2);
+	b = malloc(sizeof(char) * (l1 + l2 + 1));
 	if (b != NULL)
 	{
-		i = 0;
-		while (s1[i])
-		{
-			b[i] = s1[i];
-			i += 1;
-		}
-		c = i;
-		i = 0;
-		while (s2[i])
-			b[c++] = s2[i++];
-		b[c] = '\0';
+		ft_strcpy(b, s1);
+		ft_strcpy(b + l1, s2);
+		b[l1 + l2] = '\0';
 	}
 	return (b);
 }

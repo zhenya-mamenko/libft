@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 21:00:25 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/18 21:06:13 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 11:33:22 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_strsetdel(char **dst, char *src)
 {
-	ft_strdel(dst);
+	if (dst != NULL && *dst != NULL)
+		ft_strdel(dst);
 	*dst = src;
 }

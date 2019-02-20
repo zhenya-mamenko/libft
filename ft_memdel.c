@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 16:06:07 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/17 17:40:21 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 09:32:22 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_memdel(void **ap)
 {
-	if (*ap != NULL)
+	if (ap != NULL && *ap != NULL)
+	{
 		free(*ap);
-	*ap = NULL;
+		*ap = NULL;
+	}
 }

@@ -6,11 +6,11 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 15:28:36 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 22:26:24 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:25:55 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {

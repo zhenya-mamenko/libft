@@ -6,14 +6,13 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 08:59:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 12:17:05 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:25:24 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
-char			*ft_strmap(char const *s, char (*f)(char))
+char	*ft_strmap(char const *s, char (*f)(char))
 {
 	int		i;
 	char	*b;

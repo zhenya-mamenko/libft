@@ -6,13 +6,11 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 16:10:48 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 14:20:21 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:26:28 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
 char	**ft_strsplit(char const *s, char c)
 {

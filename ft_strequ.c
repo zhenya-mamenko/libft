@@ -6,11 +6,11 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 15:26:23 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 12:22:00 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:24:15 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {

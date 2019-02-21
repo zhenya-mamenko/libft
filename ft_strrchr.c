@@ -6,11 +6,10 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 16:51:28 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 19:50:09 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:26:18 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char			*ft_strrchr(const char *s, int c)

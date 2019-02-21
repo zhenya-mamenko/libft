@@ -6,11 +6,10 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:57:32 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/20 09:27:23 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:24:50 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize)

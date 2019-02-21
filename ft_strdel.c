@@ -6,11 +6,11 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 16:06:07 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 12:35:20 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:22:32 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_strdel(char **as)
 {

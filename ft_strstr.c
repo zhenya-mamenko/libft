@@ -6,11 +6,10 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 15:22:49 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/15 19:51:54 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:27:25 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strstr(const char *haystack, const char *needle)
@@ -37,7 +36,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 			i -= c;
 			c = 0;
 		}
-		i += 1;
+		i++;
 	}
 	return (NULL);
 }

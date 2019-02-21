@@ -6,11 +6,10 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 14:31:13 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/17 09:37:07 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:19:11 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	lst_content_len(t_list *el)

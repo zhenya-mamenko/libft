@@ -6,11 +6,10 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/16 14:33:32 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/16 15:13:25 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:19:14 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_flatten_intarr(int *a, size_t n)

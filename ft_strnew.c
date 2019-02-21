@@ -6,11 +6,10 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 16:07:23 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/20 12:33:08 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/20 23:26:07 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strnew(size_t size)

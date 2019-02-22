@@ -3,30 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
+/*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:45:59 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/11 16:36:59 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/21 21:48:10 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int i;
-	int c;
-
-	i = 0;
-	c = 0;
-	while (1)
-	{
-		if (c > 0 || !s1[i])
-		{
-			s1[i] = s2[c];
-			if (!s2[c])
-				break ;
-			c += 1;
-		}
-		i += 1;
-	}
-	return (s1);
+	return (ft_strncat(s1, s2, ft_strlen(s2)));
 }

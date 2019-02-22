@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:41:55 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/20 23:25:50 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/21 21:49:50 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t len)
 		dst[i] = src[i];
 		i += 1;
 	}
-	while (i < len)
-	{
-		dst[i] = '\0';
-		i += 1;
-	}
+	if (i < len)
+		ft_memset(dst + i, 0, len - i);
 	return (dst);
 }

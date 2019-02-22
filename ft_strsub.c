@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 09:44:22 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/20 23:27:33 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/02/21 21:42:25 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	if (b != NULL)
 	{
 		i = 0;
-		while (i < len)
+		while (i < len && s[i + start] != '\0')
 		{
 			b[i] = s[i + start];
 			i += 1;
 		}
-		b[len] = '\0';
+		b[i] = '\0';
 	}
 	return (b);
 }

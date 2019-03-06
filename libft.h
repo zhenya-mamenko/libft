@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/20 22:54:37 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/05 18:49:22 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <string.h>
 # include <stdlib.h>
+
+#include "ft_printf/ft_printf.h"
 
 typedef struct		s_list
 {

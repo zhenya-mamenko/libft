@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+         #
+#    By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/11 13:54:51 by emamenko          #+#    #+#              #
-#    Updated: 2019/02/20 22:54:16 by emamenko         ###   ########.fr        #
+#    Updated: 2019/03/05 19:00:05 by emamenko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,18 +36,32 @@ SOURCES	=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \
 
 OBJECTS	=	$(SOURCES:.c=.o)
 
+PFOBJS	=	ft_printf/ft_printf.o ft_printf/vaprintf.o ft_printf/resolvers.o \
+			\
+			ft_printf/string.o ft_printf/integer.o ft_printf/float.o \
+			ft_printf/ext.o \
+			\
+			ft_printf/atoi_s.o ft_printf/itoa_base.o ft_printf/str_funcs.o \
+			ft_printf/pf_funcs.o ft_printf/ftoa.o
+
+
 all:		$(NAME)
 
 $(NAME):
-			gcc -Wall -Wextra -Werror -I. -c $(SOURCES)
-			ar rcs $(NAME) $(OBJECTS)
+			make -C ft_printf/
+			gcc -Wall -Wextra -Werror -I. -Ift_printf/ -c $(SOURCES)
+			ar rcs $(NAME) $(OBJECTS) $(PFOBJS)
 
 clean:
+			make -C ft_printf/ clean
 			rm -f $(OBJECTS)
 
 fclean:		clean
+			make -C ft_printf/ fclean
 			rm -f $(NAME)
 
 re: 		fclean all
+			make -C ft_printf/ re
 
-reclean:	re; make clean
+reclean:	re; make clean;
+			make -C ft_printf/ reclean

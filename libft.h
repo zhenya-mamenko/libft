@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/03/10 14:04:17 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/11 16:50:41 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
+
 
 # include "ft_printf/ft_printf.h"
+# include "get_next_line.h"
 
 typedef struct		s_list
 {

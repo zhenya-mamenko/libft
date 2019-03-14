@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/03/11 16:50:41 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/13 17:16:53 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,7 @@ char				*ft_flatten_tlist(t_list const *list);
 int					ft_strchri(const char *s, int c);
 void				ft_strsetdel(char **dst, char *src);
 int					ft_freeret(void **p, int ret);
+void				ft_free_intarr(int **a, int count);
+void				ft_free_charr(char **a, int count);
 
 #endif

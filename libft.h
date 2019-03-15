@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/03/14 15:26:51 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/14 21:31:34 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,10 @@ void				ft_strsetdel(char **dst, char *src);
 int					ft_freeret(void **p, int ret);
 void				ft_free_intarr(int **a, int count);
 void				ft_free_charr(char **a, int count);
+
+int					fn_cmp_int(const void *a, const void *b);
+int					fn_cmp_long(const void *a, const void *b);
+int					fn_cmp_double(const void *a, const void *b);
+int					fn_cmp_char(const void *a, const void *b);
 
 #endif

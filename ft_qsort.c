@@ -6,44 +6,36 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/13 17:28:27 by emamenko          #+#    #+#             */
-/*   Updated: 2019/03/14 16:37:21 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/14 17:26:34 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_qsort.h"
 
-void		ft_qsort(void *a, size_t cnt, size_t sz,
+void		ft_qsort(void *a, int cnt, size_t sz,
 	int f(const void *, const void *))
 {
 	int		med;
 	int		lo;
 	int		hi;
-	int		fh;
-	int		fl;
+	t_hilo	fl;
 
 	if (cnt < 2)
 		return ;
-	else if (cnt == 2)
-	{
-		if (f(a, INCP(a, sz)) > 0)
-			SWP(a, INCP(a, sz), sz);
-		return ;
-	}
 	med = cnt >> 1;
 	lo = 0;
 	hi = cnt - 1;
-	fl = 1;
-	fh = 1;
+	HILO(fl, 1, 1);
 	while (lo < med && hi > med)
 	{
-		lo += (fl = (f(INCPN(a, sz, lo), INCPN(a, sz, med)) < 0) && fl);
-		hi -= (fh = (f(INCPN(a, sz, hi), INCPN(a, sz, med)) > 0) && fh);
-		if (!fl && !fh)
+		lo += (fl.l = (f(INCPN(a, sz, lo), INCPN(a, sz, med)) < 0) && fl.l);
+		hi -= (fl.h = (f(INCPN(a, sz, hi), INCPN(a, sz, med)) > 0) && fl.h);
+		if (!fl.l && !fl.h)
 		{
 			SWP(INCPN(a, sz, lo++), INCPN(a, sz, hi--), sz);
-			fl = 1;
-			fh = 1;
+			fl.l = 1;
+			fl.h = 1;
 		}
 	}
 	while (med > lo)
@@ -86,7 +78,6 @@ int			main(void)
 	while (i < n)
 	{
 		a[i] = rand();
-		a++;
 		i++;
 	}
 

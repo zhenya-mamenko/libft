@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/14 15:45:11 by emamenko          #+#    #+#             */
-/*   Updated: 2019/03/14 16:36:59 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/14 17:17:14 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 
 typedef struct	s_hilo
 {
-	size_t		h;
-	size_t		l;
+	int		h;
+	int		l;
 }				t_hilo;
 
 #endif

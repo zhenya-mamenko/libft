@@ -6,11 +6,11 @@
 #    By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/11 13:54:51 by emamenko          #+#    #+#              #
-#    Updated: 2019/03/14 21:36:14 by emamenko         ###   ########.fr        #
+#    Updated: 2019/03/20 11:29:06 by emamenko         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY:		$(NAME) all clean fclean re
+.PHONY:		$(NAME) all clean fclean re reclean
 
 NAME	=	libft.a
 SOURCES	=	ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcat.c \

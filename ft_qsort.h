@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/14 15:45:11 by emamenko          #+#    #+#             */
-/*   Updated: 2019/03/14 21:02:57 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/21 23:13:39 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # define HILO(hilo, X, Y)	hilo.h=(X);hilo.l=(Y)
 # define INCP(X, S)			(((char *)X) + (S))
 # define INCPN(X, S, N)		(((char *)X) + (S) * (N))
-
 
 typedef struct	s_hilo
 {

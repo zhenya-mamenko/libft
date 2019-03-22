@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/03/14 21:35:52 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/22 00:08:31 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ void				ft_strsetdel(char **dst, char *src);
 int					ft_freeret(void **p, int ret);
 void				ft_free_intarr(int **a, int count);
 void				ft_free_charr(char **a, int count);
+int					ft_strstri(const char *haystack, const char *needle);
 
 int					fn_cmp_int(const void *a, const void *b);
 int					fn_cmp_long(const void *a, const void *b);

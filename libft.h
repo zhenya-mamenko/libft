@@ -6,7 +6,7 @@
 /*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 14:20:44 by emamenko          #+#    #+#             */
-/*   Updated: 2019/03/22 00:08:31 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/24 03:48:46 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,8 @@ void				ft_free_intarr(int **a, int count);
 void				ft_free_charr(char **a, int count);
 int					ft_strstri(const char *haystack, const char *needle);
 
+void				ft_qsort(void *a, size_t cnt, size_t sz,
+						int f(const void *, const void *));
 int					fn_cmp_int(const void *a, const void *b);
 int					fn_cmp_long(const void *a, const void *b);
 int					fn_cmp_double(const void *a, const void *b);

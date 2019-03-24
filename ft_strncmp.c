@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emamenko <emamenko@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emamenko <emamenko@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 15:28:36 by emamenko          #+#    #+#             */
-/*   Updated: 2019/02/20 23:25:55 by emamenko         ###   ########.fr       */
+/*   Updated: 2019/03/24 02:19:03 by emamenko         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned char	*b1;
 	unsigned char	*b2;
 
+	if (!s1 || !s2)
+		return (-1);
 	b1 = (unsigned char *)s1;
 	b2 = (unsigned char *)s2;
 	i = 0;
